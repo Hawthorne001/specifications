@@ -46,12 +46,17 @@ entire test with a note (e.g. *Removed*).
 
 ## Building Documents
 
-We use [mkdocs](https://www.mkdocs.org/) to render the documentation. To see a live view of the documentation, run:
+We use [mkdocs](https://www.mkdocs.org/) to render the documentation. To see a live view of the documentation, in a
+Python [venv](https://docs.python.org/3/library/venv.html) run:
 
 ```bash
-pip install mkdocs
+pip install -r source/requirements.txt
 mkdocs serve
 ```
+
+To build the docs, use `mkdocs build`.
+
+In CI we verify that there are no warnings. To replicate locally, run `mkdocs build --strict`.
 
 ## Converting to JSON
 
